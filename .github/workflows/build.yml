@@ -14,9 +14,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 8.x
-      - name: Install dependencies
-        run: dotnet restore
       - name: Build
-        run: dotnet build
+        run: dotnet build ./src/Utilities.Configuration.sln
       - name: Run Unit Tests
-        run: dotnet test
+        run: dotnet test ./src/Utilities.Configuration.sln
