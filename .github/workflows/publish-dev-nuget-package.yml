@@ -31,7 +31,7 @@ jobs:
         dotnet-version: '8.x'
 
     - name: Build NuGet Package
-      run: dotnet pack .src/Utilities.Configuration/Utilities.Configuration.csproj /p:Version=${{ env.PACKAGE_VERSION }} --configuration ${{ env.BUILD_CONFIG }} --output ./artifacts
+      run: dotnet pack ./src/Utilities.Configuration/Utilities.Configuration.csproj /p:Version=${{ env.PACKAGE_VERSION }} --configuration ${{ env.BUILD_CONFIG }} --output ./artifacts
 
     - name: Publish NuGet Package
       run: dotnet nuget push ./artifacts/Utilities.Configuration.${{ env.PACKAGE_VERSION }}.nupkg --api-key ${{ env.GITHUB_NUGET_API_KEY }} --source ${{ env.GITHUB_NUGET_URL }} --skip-duplicate
