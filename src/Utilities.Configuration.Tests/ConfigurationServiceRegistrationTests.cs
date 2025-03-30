@@ -7,7 +7,7 @@ namespace Utilities.Configuration.Tests;
 public class ConfigurationServiceRegistrationTests
 {
 	[Fact]
-	public void AddAuthenticationServices_RegistersAllServices_CorrectlyResolvesTypes()
+	public void AddConfigurationServices_RegistersAllServices_CorrectlyResolvesTypes()
 	{
 		// Arrange
 		ServiceCollection services = new();
@@ -24,7 +24,7 @@ public class ConfigurationServiceRegistrationTests
 	}
 
 	[Fact]
-	public void AddAuthenticationServices_ReturnsServiceCollection()
+	public void AddConfigurationServices_ReturnsServiceCollection()
 	{
 		// Arrange
 		ServiceCollection services = new();
@@ -81,7 +81,7 @@ public class ConfigurationServiceRegistrationTests
 	}
 
 	[Fact]
-	public void AddApplicationServices_CleanUpDirectoryHandler_VerifyMediatorHandlerExists()
+	public void AddApplicationServices_GetConfigurationByKeyQueryHandler_VerifyMediatorHandlerExists()
 	{
 		// Arrange
 		ServiceCollection services = new();
